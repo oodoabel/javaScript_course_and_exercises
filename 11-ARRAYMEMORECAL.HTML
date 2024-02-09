@@ -7,6 +7,7 @@
     <button onclick="
     addTodo();
     ">Add</button>
+    <div class="js-space"></div>
     <script>
         // const myArray = [1, 2, 3, 4, 5];
         // myArray.push(100)
@@ -14,16 +15,30 @@
         // myArray.splice(0, 1);
         // console.log(myArray);
 
-        const todoList = [];
+        const todoList = ['mark', 'jake'];
+        updateScreen()
+        function updateScreen(){
+            let todoListHTML = '';
 
+        for(let i = 0; i < todoList.length; i++){
+            // const todo = todoList[i];
+            const html = `<p>${todoList[i]}</p>`;
+            todoListHTML += html;
+        }
+        document.querySelector('.js-space').innerHTML = todoListHTML;
+        
+        }
+        
         function addTodo(){
-            let input = document.querySelector('.js-input').value;
-            todoList.push(input);
-            
-
-            document.querySelector('.js-input').innerHTML = 'TTT';
+            const inputElement = document.querySelector('.js-input');
+            const name = inputElement.value;
+            todoList.push(name);
+            updateScreen();
+            inputElement.value = '';
             console.log(todoList);
         }
+        
+        
     </script>
 </body>
 </html>
