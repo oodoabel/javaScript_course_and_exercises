@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      button{
+        width: 50px;
+        height: 50px;
+        font-weight: bolder;
+        font-size: 20px;
+      }
+    </style>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <button onclick="
+      valueCurrent = valueCurrent + '1';
+      console.log(valueCurrent);">1</button>
+    <button onclick="
+      valueCurrent = valueCurrent + '2';
+      console.log(valueCurrent);">2</button>
+    <button onclick="
+      valueCurrent = valueCurrent + '3';
+      console.log(valueCurrent);">3</button>
+    <button onclick="
+      valueCurrent = valueCurrent + ' + ';
+      console.log(valueCurrent);">+</button>
+    <button onclick="
+      valueCurrent = eval(valueCurrent);
+      console.log(valueCurrent);
+      "
+    >=</button>
+    <script>
+      let valueCurrent = ' ';
+    </script>
+  </body>
+</html>

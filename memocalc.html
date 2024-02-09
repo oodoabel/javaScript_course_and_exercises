@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(13, 13, 69);
+      }
+      button{
+        aspect-ratio: 1;
+        width: 50px;
+        background-color: white;
+        color: black;
+        font-weight: bolder;
+        font-size: 20px;
+        border-width: none;
+        margin-top: 5px;
+      }
+      .screen{
+        font-size: 25px;
+        padding-top: 15px;
+        padding-right: 2px;
+        height: 50px;
+        width: 210px;
+        text-align: end;
+        background-color: white;
+        margin-top: 50px;
+        border-radius: 15px 0px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <script>
+      let sumScreen = 0;
+
+    </script>
+    <div class="maindiv">
+      <div class="screen">
+
+      </div>
+      <div>
+        <button onclick="sumScreen += '1';
+        document.querySelector('.screen').innerHTML = sumScreen">1</button>
+        <button onclick="sumScreen += '2';
+        document.querySelector('.screen').innerHTML = sumScreen">2</button>
+        <button onclick="sumScreen += '3';
+        document.querySelector('.screen').innerHTML = sumScreen">3</button>
+        <button onclick="sumScreen += '-';
+        document.querySelector('.screen').innerHTML = sumScreen">-</button>   
+      </div>
+      <div>
+        <button onclick="sumScreen += '4';
+        document.querySelector('.screen').innerHTML = sumScreen">4</button>
+        <button onclick="sumScreen += '5';
+        document.querySelector('.screen').innerHTML = sumScreen">5</button>
+        <button onclick="sumScreen += '6';
+        document.querySelector('.screen').innerHTML = sumScreen">6</button>
+        <button onclick=" sumScreen += '/';
+        document.querySelector('.screen').innerHTML = sumScreen ">/</button>
+      </div>
+      <div>
+        <button onclick="sumScreen += '7';
+        document.querySelector('.screen').innerHTML = sumScreen">7</button>
+        <button onclick="sumScreen += '8';
+        document.querySelector('.screen').innerHTML = sumScreen">8</button>
+        <button onclick="sumScreen += '9';
+        document.querySelector('.screen').innerHTML = sumScreen">9</button>
+        <button onclick="sumScreen += ' * ';
+        document.querySelector('.screen').innerHTML = sumScreen">*</button>
+      </div>
+      <div>
+        <button onclick="sumScreen = '';
+        document.querySelector('.screen').innerHTML = sumScreen">C</button>
+        <button onclick="sumScreen += '0';
+        document.querySelector('.screen').innerHTML = sumScreen">0</button>
+        <button onclick="sumScreen += ' + ';
+        document.querySelector('.screen').innerHTML = sumScreen">+</button>
+        <button onclick="sumScreen =eval(sumScreen);
+        document.querySelector('.screen').innerHTML = sumScreen">=</button>
+      </div>
+    </div>
+    <script>
+      let screenContent = document.querySelector('.screen').innerHTML
+    </script>
+  </body>
+</html>

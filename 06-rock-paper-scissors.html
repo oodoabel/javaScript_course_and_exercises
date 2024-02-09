@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <style>
+      body{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        background-color: rgb(7, 7, 59);
+      }
+
+      p{
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-weight: bolder;
+        font-size: 30px;
+        text-decoration: underline green;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      button{
+        aspect-ratio: 1;
+        width: 100px;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: green;
+        outline: none;
+      }
+      .img{
+        height: 50px;
+      }
+     
+    </style>
+  </head>
+  <body>    
+    <div class="maindiv">
+      <div>
+        <p>Rock Paper Scissors</p>
+      </div>
+      <div class="btns">
+        
+        <button 
+          class="rock" 
+          onclick="makeChoice('Rock')"
+        >
+          <img src="/icons/rock.png" class="img">Rock
+        </button>
+        
+        <button 
+          class="paper"
+          onclick="makeChoice('Paper')"
+        > <img  class="img" src="/icons/paper.png">Paper</button>
+
+        <button class="scissors" onclick="makeChoice('Scissors')">
+          <img  class="img" src="/icons/scissors.png">Scissors
+        </button>
+
+      </div>
+   
+
+    </div>
+      <script>
+      const makeChoice = choice => {
+        const randomNumber = Math.floor(Math.random() * 3);
+        let computerMove, result
+
+        const choices = ['Rock', 'Paper', 'Scissors']
+
+        
+        computerMove = choices[randomNumber];
+
+        const myChoiceIndex = choices.indexOf(choice)
+        const computerChoiceIndex = choices.indexOf(computerMove)
+        
+        console.log(myChoiceIndex)
+        console.log(computerChoiceIndex)
+
+        // function playGame {} {
+
+        // }
+
+        if (computerMove === choice){
+          result = 'Tie';
+        } 
+        
+        else if (computerChoiceIndex > myChoiceIndex) {
+          if(myChoiceIndex === 0 && computerChoiceIndex === 2){
+            result = 'You Win';
+          }
+          else{
+            result = 'You Lost';
+          }
+        } 
+
+        else if (computerChoiceIndex < myChoiceIndex) {
+          if(computerChoiceIndex === 0 && myChoiceIndex === 2){
+            result = 'You Lost';
+          }
+          else{
+            result = 'You Win';
+          }
+        }
+        
+        alert(`Your Move: ${choice} \nComputer Move: ${computerMove}, \nResult: ${result}`);
+      }
+   </script>
+  </body> 
+</html>

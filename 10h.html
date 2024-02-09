@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .cost-input{
+                font-size: 15px;
+                padding: 10px;
+            }
+            .calculate-button{
+                background-color: rgb(0, 129, 0);
+                padding: 13px;
+                border: none;
+                color: white;
+                cursor: pointer;
+            }
+            .error{
+                color: red;
+                font-family: arial;
+            }
+    </style>
+</head>
+<body>
+    <p>Amazon Shipping Calculator</p>
+
+        <input class="js-input cost-input" type="text" onkeydown= "
+        console.log(event.key); handleCostKeydown(event)
+         " placeholder="Cost of order">
+        <button class="calculate-button" onclick="calculate(); ">Calculate</button>
+        <p class="js-calculated-price"></p>
+
+    <script>
+        function handleCostKeydown(event) {
+                if (event.key === 'Enter'){
+                    calculate()
+                }
+            }
+
+
+            function calculate (){
+                let costOfOrder = Number(document.querySelector('.js-input').value);
+                
+                // let inputValue = Number(costOfOrder.value);
+
+                if(costOfOrder < 0 ){
+                    document.querySelector('.js-calculated-price')
+                        .innerHTML  = 'Error: cost cannot be less than $0';
+                    document.querySelector('.js-calculated-price').classList.add('error')
+                }
+                else if(costOfOrder < 40 && costOfOrder > 0) {
+                    document.querySelector('.js-calculated-price')
+                        .innerHTML = JSON.parse(`${costOfOrder}`) + 10;
+                }else{
+                    document.querySelector('.js-calculated-price')
+                        .innerHTML = `$${costOfOrder}`;
+                }
+                
+            }
+            
+    </script>
+</body>
+</html>

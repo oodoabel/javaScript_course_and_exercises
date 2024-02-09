@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="js-9a" onclick="runFunc()">9a</button>
+    <button class="js-9b">9b</button> <br><br>
+
+    <button class="js-heads" onclick="document.querySelector('.js-choice')
+    .innerHTML = 'Your chose: Heads'">Heads</button>
+    <button class="js-tails" onclick="document.querySelector('.js-choice')
+    .innerHTML = 'Your chose: Tails'">Tails</button>
+    <p class="js-choice"></p>
+
+    <br><br>
+    <input class="js-input" onkeydown="handleCostKeydown(event)
+    ">
+    <button class="js-sibmit" onclick="headTail()">Submit</button>
+    <br>
+    <p class="js-output"></p>
+    <script>
+
+        function handleCostKeydown(event) {
+                if (event.key === 'Enter'){
+                    document.querySelector('.js-output').innerHTML = `Your name is ${document.querySelector('.js-input').value}! ` 
+                }
+            }
+
+        function headTail(){
+            // const buttonHead = document.querySelector('.js-heads');
+            // let headContent = buttonHead.innerText;
+            // console.log(headContent);
+            // if(document.querySelector('.js-heads').innerHTML || document.querySelector('.js-Tails').innerHTML === 'Heads'){
+            //     document.querySelector('.js-choice')
+            //         .innerHTML = 'Your chose: Heads'
+            // } else {
+            //     document.querySelector('.js-choice')
+            //         .innerHTML = 'Your chose: Tails'
+            // }
+
+            // let value = document.querySelector('.js-input').value
+            // console.log(value)
+            document.querySelector('.js-output').innerHTML = `Your name is ${document.querySelector('.js-input').value}! ` 
+        }
+
+
+        function runFunc() {
+            const buttonElement = document.querySelector('.js-9a')
+
+            let content = buttonElement.innerText;
+            console.log(content)
+            if (content === '9a'){
+                document.querySelector('.js-9a').innerHTML = "9a done!"
+            }else {
+                document.querySelector('.js-9a').innerHTML = '9a'
+            }
+            console.log(document.querySelector('.js-9a').innerHTML)
+
+        }
+    </script>
+</body>
+</html>

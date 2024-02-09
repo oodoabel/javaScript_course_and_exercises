@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <input type="text" placeholder="Todo name" class="js-input">
+    <button onclick="
+    addTodo();
+    ">Add</button>
+    <script>
+        // const myArray = [1, 2, 3, 4, 5];
+        // myArray.push(100)
+        // console.log(myArray);
+        // myArray.splice(0, 1);
+        // console.log(myArray);
+
+        const todoList = [];
+
+        function addTodo(){
+            let input = document.querySelector('.js-input').value;
+            todoList.push(input);
+            
+
+            document.querySelector('.js-input').innerHTML = 'TTT';
+            console.log(todoList);
+        }
+    </script>
+</body>
+</html>

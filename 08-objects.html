@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <body>
+        <script>
+            // const product = {
+            //     name: 'socks',
+            //     price: 1090
+            // };
+            // console.log(product)
+            // console.log(product.price);
+            // console.log(product.name);
+
+            // const product2 = {
+            //     name: 'shirt',
+            //     rating: {
+            //         stars: 4.5,
+            //         count: 87
+            //     },
+            //     fun: function () {
+            //         return ('function indide a function');
+            //     }
+            // };
+
+            // console.log(product2);
+            // console.log(product2.name);
+            // console.log(product2.rating.count); 
+            // console.log(product2.fun());
+
+            // console.log(JSON.stringify(product2));
+            // const jsonString = JSON.stringify(product2);
+            // console.log(JSON.parse(jsonString));
+
+            // console.log('hello'.length);
+            // console.log('hello' .toUpperCase());
+            // const object1 = {
+            //     massage: 'hello'
+            // };
+
+            // const object2 = object1;
+
+
+            const amazon = {
+                name: 'basketball',
+                price: 2095
+            };
+
+            amazon['delivery-time'] = '3days';
+
+            amazon.price += 500;
+
+            console.log(amazon.price);
+
+            console.log(amazon);
+
+            console.log('hello'.length);
+            console.log('hello'.toUpperCase());
+
+            const object1 = {
+                message: 'hello'
+            };
+            const object2 = object1;
+            console.log(object2);
+            object1.message = 'Good job'; 
+            console.log(object1)
+            console.log(object2)
+            
+            const object3 = {
+                message: 'hello'
+            };
+
+            console.log(object1 === object3);
+            console.log(object1 === object2);
+
+            const object4 = {
+                message: 'Good job!',
+                price: 799
+            };
+
+            // const message = object4.message;
+            const { message, price } = object4;
+            console.log(message);
+            console.log(price);
+
+            const object5 = {
+                // message: message
+                message
+            };
+            console.log(object5);
+            
+
+        </script>
+    </body>
+</html>
