@@ -58,7 +58,8 @@
 
         // }
 
-        const array = [1,9,3];
+        const num = [2, -1, -5, -99];
+        const num1 = [2, 1, 0, 3, -4];
         // let sum = [];
         // array.forEach(item => {
         //     console.log(item);
@@ -75,17 +76,44 @@
         // for(let i= 0; i <= 5; i++){
         //     console.log(i);
         // }
-        
-        function switched(array){
-            const newArr = [];
-            for (let i = array.length - 1; i <= array.length - 1; i--){
-            newArr.push(array[i]);
-            }
 
-            console.log(newArr);
+        // 11i
+        newArray = [];
+        function addOne (array, num){
+            for(let i = 0; i < array.length; i++){
+                newArray.push(array[i] + num);
+            }
+            console.log(newArray);
         }
-        
-        switched(num);
+        addOne(num, 2);
+
+        // 11j
+
+        const sumAll = [];
+        function addArrays(array1, array2){
+            for(let i = 0; i < array1.length && i < array2.length; i++){
+                sumAll.push(array1[i] + array2[i])
+            }
+            console.log(sumAll);
+        }
+
+        addArrays(num, num1);
+
+        // 11k
+
+        function countPositive(nums){
+            let positiveNumber = 0;
+            for(let i = 0; i < nums.length; i++){
+                if(nums[i] > 0){
+                    positiveNumber += 1;
+                }
+            }
+            console.log(positiveNumber);
+        }
+
+        countPositive(num);
+
+
 
     </script>
 </body>
