@@ -11,13 +11,12 @@ function func(){
         // const {  } = todoObject;
         
         const html = 
-        `<p>
-            ${name} ${dueDate}
-            <button onclick = "
+        `   <div>${name}</div>
+            <div>${dueDate}</div>
+            <button class= "delete-todo-button" onclick = "
             todo.splice(${i}, 1);
             func();
-            ">Delete</button>
-        </p>`;
+            ">Delete</button>`;
         value += html;
 
 }
@@ -28,21 +27,13 @@ document.querySelector('.js-space')
 function addTodo (){
     const inputElement = document.querySelector('.js-toDo');
     let name = inputElement.value;
+
     const inputDate = document.querySelector('.js-dueDate');
-    console.log(inputDate);
     let dueDate = inputDate.value;
     todo.push({
         name,
         dueDate
-    });
-
-    
-    
-
-    
-    
-    console.log(todo);
-    
+    });    
 
     inputElement.value = '';
     func();

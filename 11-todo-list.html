@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head><title>To Do List</title></head>
+    <head><title>To Do List</title> <link rel="stylesheet" href="11-todo-list.css"></head>
     <body>
         <p>To Do List</p>
-        <input type="text" placeholder="Todo name" class="js-toDo">
-        <input type="date">
+        <div class="todo-grid-input">
+        <input type="text" placeholder="Todo name " class="js-toDo name-input">
+        <input type="date" class="js-dueDate dueDate-input">
         
-        <button onclick="
+        <button class="add-todo-button" onclick="
         addTodo();
         ">Add</button>
-        <div class="js-space"></div>
+        </div>
+        
+        <div class="js-space todo-grid"></div>
 
 
 
