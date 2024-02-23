@@ -10,7 +10,7 @@
 
         // const strings = ['not', 'found'];
 
-        const strings = ['hello', 'world', 'search', 'good'];
+        const strings = ['hello', 'egg', 'world', 'search', 'egg', 'good'];
 
         // for(let i = 0; i < strings.length; i++){
         //     if (strings[i] === 'search'){
@@ -20,17 +20,34 @@
         //     else if (strings[i] !== 'search'){console.log('-1');}
         // }
 
-        function findIndex(array, word){
-            for(let i = 0; i < array.length; i++){
-                if (array[i] === word){
-                    console.log(i);
-                    // break;
-                }
-                else{console.log('-1');}
-            }  
+        // function findIndex(array, word){
+        //     for(let i = 0; i < array.length; i++){
+        //         if (array[i] === word){
+        //             console.log(i);
+        //             // break;
+        //         }
+        //         else{console.log('-1');}
+        //     }  
+        // }
+
+        // findIndex(strings, 'good');
+
+        const newFood = [];
+
+        function removeEgg(food){
+            for(let i = 0; i < food.length; i++){
+                
+                if (food[i] === 'egg'){
+                    continue;
+                    // food.splice(i, 1);
+                }else{
+                    newFood.push(food[i]);}
+                
+            }
+            console.log(newFood);
         }
 
-        findIndex(strings, 'good');
+        removeEgg(strings);
 
     </Script>
 </body>
