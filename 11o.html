@@ -10,7 +10,6 @@
 
         // const strings = ['not', 'found'];
 
-        const strings = ['hello', 'egg', 'world', 'search', 'egg', 'good'];
 
         // for(let i = 0; i < strings.length; i++){
         //     if (strings[i] === 'search'){
@@ -32,12 +31,16 @@
 
         // findIndex(strings, 'good');
 
-        const newFood = [];
+        const strings = ['hello', 'egg', 'world', 'search', 'egg', 'egg', 'egg', 'good'];
 
         function removeEgg(food){
-            for(let i = 0; i < food.length; i++){
-                
-                if (food[i] === 'egg'){
+        const newFood = [];
+        let count = 0;
+
+            for(let i = food.length - 1; i <= food.length - 1; i--){
+
+                if (food[i] === 'egg' && count <= 2){
+                    count++
                     continue;
                     // food.splice(i, 1);
                 }else{
