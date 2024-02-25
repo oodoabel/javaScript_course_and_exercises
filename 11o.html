@@ -31,13 +31,13 @@
 
         // findIndex(strings, 'good');
 
-        const strings = ['hello', 'egg', 'world', 'search', 'egg', 'egg', 'egg', 'good'];
+        const strings = ['egg', 'apple', 'egg', 'egg', 'ham'];
 
         function removeEgg(food){
         const newFood = [];
         let count = 0;
 
-            for(let i = food.length - 1; i <= food.length - 1; i--){
+            for(let i = food.length ; i >= 0; i--){
 
                 if (food[i] === 'egg' && count <= 2){
                     count++
