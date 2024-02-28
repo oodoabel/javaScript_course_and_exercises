@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-Excercises</title>
+</head>
+<body>
+    <!-- <button class="js-start" onclick="
+        run();
+        ">Start</button> -->
+
+        <button onclick="
+        add();
+        ">Add to cart</button>
+
+        <div class="js-div"></div>
+    <script>
+        // const add = function run(){
+        //     console.log(2 + 3);
+        // }
+
+        // const add1 = function runTwice(fun){
+        //     fun();
+        //     fun();
+        // }
+
+        // add1(add);
+
+        // function run(){
+        //     let buttonElement = document.querySelector('.js-start');
+        //     buttonElement.innerHTML = 'Loading...';
+        //     setTimeout(
+        //         function(){
+        //             buttonElement.innerHTML = 'Finished!';
+        //         }, 1000
+        //     );
+        // }
+
+
+        function add(){
+            let divContent = document.querySelector('.js-div');
+            let content = divContent.innerHTML;
+            divContent.innerHTML = 'Added';
+            
+            setTimeout(
+                function(){
+                    divContent.innerHTML = '';
+                }, 2000
+            );
+
+        }
+        onload()
+        setInterval(
+            function(){
+                let title = document.title;
+                title = '(2) New messages';
+            }, 2000
+        );
+
+            const regularFunction = function (){
+                console.log('regular function')
+            }
+
+            const arrowFunction = () => {
+                console.log('hello');
+            }; 
+
+            arrowFunction();
+
+    </script>
+</body>
+</html>

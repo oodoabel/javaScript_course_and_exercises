@@ -18,11 +18,15 @@ let isAutoPlaying = false;
 let intervalid;
 let buttonElement = document.querySelector('.js-auto-play-button');
 
+// const autoplay = () =>{
+
+// };
+
 function autoplay(){
     
     
     if(!isAutoPlaying){
-       intervalid = setInterval(function(){
+       intervalid = setInterval(() => {
             const playWith = pickComputerMove();
             playGame(playWith);
         }, 1000 );
@@ -37,6 +41,16 @@ function autoplay(){
     }
 
 }
+const rockButtonElement = document.querySelector('.js-rock-button');
+rockButtonElement.addEventListener('click', playGame('rock'));
+
+const paperButtonElement = document.querySelector('.js-paper-button');
+rockButtonElement.addEventListener('click', playGame('rock'));
+
+const scissorsButtonElement = document.querySelector('.js-scissors-button');
+rockButtonElement.addEventListener('click', playGame('rock'));
+
+
 function display(){
     if(isAutoPlaying === true){
         buttonElement.value = 'Stop Play';

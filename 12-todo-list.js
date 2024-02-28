@@ -5,7 +5,8 @@ func();
 
 function func(){
     let value = '';
-    todo.forEach(function(todoObject, index){
+
+    todo.forEach((todoObject, index) => {
         const  { name, dueDate } = todoObject;
         // const {  } = todoObject;
          
