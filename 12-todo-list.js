@@ -4,22 +4,36 @@ func();
 
 
 function func(){
-    let value = [];
-    for(let i = 0; i < todo.length; i++){
-        const todoObject = todo[i];
+    let value = '';
+    todo.forEach(function(todoObject, index){
         const  { name, dueDate } = todoObject;
         // const {  } = todoObject;
-        
+         
         const html = 
         `   <div>${name}</div>
             <div>${dueDate}</div>
             <button class= "delete-todo-button" onclick = "
-            todo.splice(${i}, 1);
+            todo.splice(${index}, 1);
             func();
             ">Delete</button>`;
         value += html;
+    });
 
-}
+//     for(let i = 0; i < todo.length; i++){
+//         const todoObject = todo[i];
+//         const  { name, dueDate } = todoObject;
+//         // const {  } = todoObject;
+         
+//         const html = 
+//         `   <div>${name}</div>
+//             <div>${dueDate}</div>
+//             <button class= "delete-todo-button" onclick = "
+//             todo.splice(${i}, 1);
+//             func();
+//             ">Delete</button>`;
+//         value += html;
+
+// }
 document.querySelector('.js-space')
     .innerHTML = value;
 }
