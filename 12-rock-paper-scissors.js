@@ -4,6 +4,10 @@ let score = JSON.parse(localStorage.getItem('score')) || {
     ties: 0
 };
 
+
+
+
+
 updateScoreElement();
 
 
@@ -14,10 +18,22 @@ updateScoreElement();
 //         ties: 0
 //     }
 // }
+
+const resetButtonElement = document.querySelector('.js-reset-score-button');
+
+resetButtonElement.addEventListener('click', () => {    
+    score.losses = 0;
+    score.wins = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    updateScoreElement();
+})
 let isAutoPlaying = false; 
 let intervalid;
 let buttonElement = document.querySelector('.js-auto-play-button');
-
+buttonElement.addEventListener('click', () => {
+    autoplay()
+})
 // const autoplay = () =>{
 
 // };
@@ -42,13 +58,19 @@ function autoplay(){
 
 }
 const rockButtonElement = document.querySelector('.js-rock-button');
-rockButtonElement.addEventListener('click', playGame('rock'));
+rockButtonElement.addEventListener('click', () => {
+    playGame('rock');
+});
 
 const paperButtonElement = document.querySelector('.js-paper-button');
-rockButtonElement.addEventListener('click', playGame('rock'));
+paperButtonElement.addEventListener('click', () => {
+    playGame('paper');
+});
 
 const scissorsButtonElement = document.querySelector('.js-scissors-button');
-rockButtonElement.addEventListener('click', playGame('rock'));
+scissorsButtonElement.addEventListener('click', () => {
+    playGame('scissors');
+});
 
 
 function display(){
@@ -57,7 +79,15 @@ function display(){
     }else{buttonElement.value = 'Auto Play';}
 }
 
-
+document.body.addEventListener('keydown', (event) => {
+    if(event.key === 'r' || event.key === 'R'){
+        playGame('rock');
+    }else if(event.key === 'p' || event.key === 'P'){
+        playGame('paper');
+    }else if(event.key === 's' || event.key === 'S'){
+        playGame('scissors');
+    }
+});
 
 function playGame(playerMove) {
 
