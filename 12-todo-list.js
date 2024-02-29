@@ -2,6 +2,10 @@ const todo = [{name: 'james', dueDate: '2022/12/22'}
 , {name: 'jude', dueDate: '2022/12/22'}];
 func();
 
+const addButtonElement = document.querySelector('.js-add-todo-button');
+addButtonElement.addEventListener('click', () =>{
+    addTodo();
+})
 
 function func(){
     let value = '';
