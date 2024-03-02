@@ -80,7 +80,7 @@ function display(){
 }
 
 document.body.addEventListener('keydown', (event) => {
-    if(event.key === 'r' || event.key === 'R'){
+    if(event.key === 'r'){
         playGame('rock');
     }else if(event.key === 'p' || event.key === 'P'){
         playGame('paper');
